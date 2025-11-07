@@ -78,7 +78,7 @@ chatForm.addEventListener("submit", async (e) => {
       typeof OPENAI_API_KEY !== "undefined" ? OPENAI_API_KEY : null;
     const apiUrl = apiKey
       ? "https://api.openai.com/v1/chat/completions"
-      : "https://your-cloudflare-worker-url/"; // Replace with your deployed Worker URL
+      : "https://loreal-worker.jmillings.workers.dev/"; // Replace with your deployed Worker URL
 
     const headers = apiKey
       ? {
