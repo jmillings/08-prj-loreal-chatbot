@@ -8,7 +8,10 @@
 /* —— body + fonts —— */
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #333;
+  color: #111;
+  background: url("https://insideretail.asia/wp-content/uploads/2020/10/LOreal-Luxe.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
 }
@@ -16,48 +19,115 @@ body {
 .page-wrapper {
   width: 90%;
   max-width: 900px;
+  background: rgba(255, 255, 255, 0.226);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 /* header */
+
 .site-header {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 48px;
+}
+
+.loreal-logo {
+  display: block;
+  margin: 0 auto 18px auto;
+  max-width: 180px;
+  height: auto;
 }
 
 .site-title {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #111;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 /* chat window */
 .chatbox {
   margin: 40px 0;
+  background: rgba(255, 255, 255, 0.123);
+  border-radius: 12px;
+  padding: 12px 0 0 0;
 }
 
 .chat-window {
   height: 360px;
-  border: 1px solid #000;
+  border: 1.5px solid #111;
   padding: 20px;
   font-size: 18px;
   line-height: 1.5;
   overflow-y: auto;
-  background: #fafafa;
+  background: rgba(247, 247, 247, 0.123);
   white-space: pre-line;
+  border-radius: 8px;
 }
 
 /* messages */
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.msg .msg-text {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04);
+  max-width: 70vw;
+  word-break: break-word;
+}
+
+.msg.user .msg-text {
+  background: rgba(0, 0, 0, 0.28);
+  color: #080808;
+  font-weight: 500;
+}
+
+.msg.ai .msg-text {
+  background: rgba(220, 0, 0, 0.28);
+  color: #080808;
+}
+
+.msg .msg-time {
+  font-size: 12px;
+  color: #111;
+  margin-left: 2px;
+  align-self: flex-end;
+  min-width: 38px;
+  text-align: right;
+}
+
+.msg .error {
+  color: #b30000;
+  font-weight: 600;
+}
+
+.msg.ai.loading .msg-text {
+  color: #bfa46f;
+  font-style: italic;
+  background: #fffbe6;
 }
 
 .msg.user {
-  color: #000;
+  color: #111;
+  font-weight: 500;
 }
 
 .msg.ai {
-  color: #666666;
+  color: #6d6d6d;
 }
 
 /* input row */
@@ -65,6 +135,9 @@ body {
   display: flex;
   gap: 12px;
   margin-top: 16px;
+  background: rgba(255, 255, 255, 0.123);
+  border-radius: 8px;
+  padding: 8px 8px 8px 8px;
 }
 
 .chat-form input {
@@ -81,7 +154,7 @@ body {
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
+  background: #111;
   color: #fff;
   border: none;
   padding: 12px;
@@ -92,6 +165,8 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: background 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 .chat-form button .material-icons {
@@ -99,11 +174,12 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #bfa46f;
+  color: #111;
 }
 
 .chat-form button:focus {
-  outline: 2px solid #000;
+  outline: 2px solid #bfa46f;
   outline-offset: 2px;
 }
 
@@ -121,11 +197,12 @@ body {
 }
 
 /* footer */
+
 .site-footer {
   margin: 60px 0 40px;
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #f1daab;
 }
 
 .site-footer nav {
@@ -134,10 +211,12 @@ body {
 
 .site-footer a {
   margin: 0 8px;
-  color: #000;
+  color: #111;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: #c5a158;
 }
